@@ -1,0 +1,14 @@
+    
+    -The First string have probability of 3 
+    -The remain string ( (n - 1) string's) have probability of 2 , because there is 3 string's in original and if we take one then we can just add 
+     2 , and this way make sure that no two consecutive days have the same activity.
+
+    - Hens , count = 3 * 2^(n - 1) 
+    
+    - Example : 
+     n = 2 
+     count : 3 * 2^1 = 6
+     
+     n = 4
+     count : 3 * 2^3 = 24
+--------------------------------------------------------------------------------------------------------------------------------------------------
