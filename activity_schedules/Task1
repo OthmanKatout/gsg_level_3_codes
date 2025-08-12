@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+#define int long long
+#define mod(a , b) ((a%b) + b)%b
+
+using namespace std;
+
+int lcm(int a, int b) {
+    return a / __gcd(a, b) * b;
+}
+
+int n , ans;
+vector<string>Activities;
+string last;
+void generate_per(int cnt , string s ){
+
+if(cnt == n ){
+cout << s << "\n";ans ++;
+return;
+}
+
+for(int i = 0 ;i < Activities.size() ;i ++ ){
+
+if(Activities[i] == last)continue;
+string tmp = last;
+last = Activities[i];
+generate_per(cnt + 1 , s + " " + Activities[i]);
+last = tmp;
+}
+
+}
+
+void solve(){
+
+
+// Author : Othman Katout
+// Gmail : othmanghaleb22331@gmail.com
+
+/// I'll never give up , that's my work :)
+/// the road is very long , but i believe that i will reach
+
+Activities = {"Swimming", "Running", "Football"};
+cin >> n;
+ans = 0;
+generate_per(0 , "");
+cout << " Count : " << ans;
+
+}
+int32_t main(){
+ios_base::sync_with_stdio(false);cin.tie(NULL);
+
+int t=1;
+
+//cin>>t;
+
+while(t--){solve();}
+}
